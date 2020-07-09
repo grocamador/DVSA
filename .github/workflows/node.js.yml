@@ -35,6 +35,7 @@ jobs:
         run: |
           export PATH=~/.npm-blobal/bin:$PATH
           chmod +x decrypt_secret.sh
+          pip install requests
           ./decrypt_secret.sh
           npm i -D https://artifactory.app.protego.io/cloudguard-serverless-plugin.tgz
           npm i -g serverless
