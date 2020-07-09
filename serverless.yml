@@ -41,6 +41,20 @@ custom:
       Enabled: false
     proact:
       Enabled: true
+      Features:
+        PermissiveRole:
+          Enabled: true
+          FailThreshold: Medium
+        VulnerableDependency:
+          Enabled: true
+          FailThreshold: Medium
+        RuleViolation:
+          Enabled: false
+          FailThreshold: none
+        CredentialsUsage:
+          Enabled: true
+          FailThreshold: medium
+
 
   output:
     file: ./client/src/be-stack.json
