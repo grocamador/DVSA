@@ -50,10 +50,10 @@ custom:
           FailThreshold: Medium
         RuleViolation:
           Enabled: false
-          FailThreshold: none
+          FailThreshold: None
         CredentialsUsage:
           Enabled: true
-          FailThreshold: medium
+          FailThreshold: Medium
 
 
   output:
