@@ -1,0 +1,35 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: CloudGuard Workload - Serverless CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-18.04
+
+    name: Use Node.js ${{ matrix.node-version }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@master
+      - name: Setup node
+        uses: actions/setup-node@master
+        with:
+          node-version: ${{ matrix.node-version }}   
+      - name: Installing packages
+        env:
+          NPM_CONFIG_PREFIX: "~/.npm-global"
+        run: |
+          export PATH=~/.npm-blobal/bin:$PATH
+          npm i -D https://artifactory.app.protego.io/cloudguard-serverless-plugin.tgz
+          npm i -g serverless
+          source ~/.profile
+          npm ci
+          ~/.npm-global/bin/serverless package
+        
