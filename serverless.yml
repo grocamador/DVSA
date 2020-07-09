@@ -1,5 +1,5 @@
 ##################################################
-# DVSA: a Damn Vulnerable Serverless Application #
+# DVSA: a Damn Vulnerable Serverless Application ##
 ##################################################
 service: dvsa
 
@@ -23,15 +23,24 @@ plugins:
   - serverless-offline
   - serverless-stack-output
   - serverless-scriptable-plugin
+  - serverless-pseudo-parameters
+  - serverless-cloudguard-plugin
 
 custom:
   stage: ${opt:stage, self:provider.stage}
   accountId: ${file(backend/serverless/scripts/vars.js):accountId}
-  
+  bucketNames:
+    bucket-feedback-bucket: dvsa-feedback-bucket-${self:custom.accountId}
+    bucket-receipts-bucket: dvsa-receipts-bucket-${self:custom.accountId}
   client:
     bucketName: dvsa-website-${self:custom.accountId}
     distributionFolder: client/dist
     errorDocument: index.html
+  cloudguard:
+    fsp:
+      Enabled: false
+    proact:
+      Enabled: true
 
   output:
     file: ./client/src/be-stack.json
