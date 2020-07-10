@@ -16,19 +16,17 @@ package:
   individually: true
   excludeDevDependencies: false
   exclude:
-    - ./**
+    - "**/node_modules/**"
+    - "./**"
 
 plugins:
   - serverless-finch
   - serverless-offline
   - serverless-stack-output
   - serverless-scriptable-plugin
-  - serverless-jetpack
   - serverless-cloudguard-plugin
 
 custom:
-  serverless-jetpack:
-    mode: npm
   stage: ${opt:stage, self:provider.stage}
   accountId: ${file(backend/serverless/scripts/vars.js):accountId}
   bucketNames:
