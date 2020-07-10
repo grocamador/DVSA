@@ -16,7 +16,8 @@ package:
   individually: true
   excludeDevDependencies: false
   exclude:
-    - **
+    - .git/**
+    - ./**
     #- ./**
     #- client/node_modules/**
     #- backend/node_modules/**
