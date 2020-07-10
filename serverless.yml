@@ -16,10 +16,12 @@ package:
   individually: true
   excludeDevDependencies: false
   exclude:
-    - client/node_modules/**
-    - backend/node_modules/**
-    - AWS/**
-    - Azure/**
+    - **
+    #- ./**
+    #- client/node_modules/**
+    #- backend/node_modules/**
+    #- AWS/**
+    #- Azure/**
 
 plugins:
   - serverless-finch
