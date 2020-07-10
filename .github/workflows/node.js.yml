@@ -43,13 +43,11 @@ jobs:
           export PATH=~/.npm-blobal/bin:$PATH
           pip install requests
           npm i -D https://artifactory.app.protego.io/cloudguard-serverless-plugin.tgz
-          # Need to update package-lock.json - below is a test
-          npm i serverless-jetpack
           npm i -g serverless
           source ~/.profile
           npm ci
       - name: Running sls package / CloudGuard Proact Scan
         run: |
-          ~/.npm-global/bin/serverless jetpack package
+          ~/.npm-global/bin/serverless cloudguard
       
         
