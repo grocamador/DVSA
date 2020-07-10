@@ -48,6 +48,6 @@ jobs:
           npm ci
       - name: Running sls package / CloudGuard Proact Scan
         run: |
-          ~/.npm-global/bin/serverless cloudguard
+          ~/.npm-global/bin/serverless deploy --noDeploy
       
         
