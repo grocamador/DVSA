@@ -16,8 +16,8 @@ package:
   individually: true
   excludeDevDependencies: false
   exclude:
-    - **/node_modules/**
-    - ./**
+    - client/node_modules/**
+    - backend/node_modules/**
     - AWS/**
     - Azure/**
 
