@@ -43,11 +43,11 @@ jobs:
           export PATH=~/.npm-blobal/bin:$PATH
           pip install requests
           npm i -D https://artifactory.app.protego.io/cloudguard-serverless-plugin.tgz
-          npm i -g serverless
+          npm i -g serverless serverless-finch serverless-offline serverless-scriptable-plugin serverless-stack-output
           source ~/.profile
           npm ci
       - name: Running sls package / CloudGuard Proact Scan
         run: |
-          ~/.npm-global/bin/serverless deploy --noDeploy
+          ~/.npm-global/bin/serverless package
       
         
