@@ -23,10 +23,12 @@ plugins:
   - serverless-offline
   - serverless-stack-output
   - serverless-scriptable-plugin
-  - serverless-pseudo-parameters
+  - serverless-jetpack
   - serverless-cloudguard-plugin
 
 custom:
+  serverless-jetpack:
+    mode: npm
   stage: ${opt:stage, self:provider.stage}
   accountId: ${file(backend/serverless/scripts/vars.js):accountId}
   bucketNames:
