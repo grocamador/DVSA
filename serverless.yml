@@ -16,10 +16,10 @@ package:
   individually: true
   excludeDevDependencies: false
   exclude:
-    - "**/node_modules/**"
-    - "./**"
-    - "AWS/**"
-    - "Azure/**"
+    - **/node_modules/**
+    - ./**
+    - AWS/**
+    - Azure/**
 
 plugins:
   - serverless-finch
