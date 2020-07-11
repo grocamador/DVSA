@@ -1,0 +1,67 @@
+CredentialsUsage:
+  Result: Succeeded
+PermissiveRole:
+  RedundantPermissions:
+    dynamodb:
+      dynamodb:*:
+      - arn:aws:dynamodb:eu-west-1:520566123962:table/*
+    events:
+      events:*:
+      - arn:aws:events:eu-west-1:520566123962:rule/*
+    iam:
+      iam:*:
+      - '*'
+    logs:
+      logs:CreateLogStream:
+      - arn:aws:logs:eu-west-1:520566123962:log-group:/aws/lambda/*:*:*
+      logs:PutLogEvents:
+      - arn:aws:logs:eu-west-1:520566123962:log-group:/aws/lambda/*:*:*
+    rds:
+      rds:*:
+      - arn:aws:rds:eu-west-1:520566123962:cluster:*
+      - arn:aws:rds:eu-west-1:520566123962:db:*
+  Result: Failed
+  SuggestedRole:
+    Statement:
+    - Action:
+      - iam:PassRole
+      Effect: Allow
+      Resource:
+      - '*'
+      Sid: ProtegoGenerated3489cf7d
+    - Action:
+      - dynamodb:BatchGetItem
+      Effect: Allow
+      Resource:
+      - arn:aws:dynamodb:eu-west-1:520566123962:table/*
+      Sid: ProtegoGenerated081394ed
+    - Action:
+      - events:PutRule
+      Effect: Allow
+      Resource:
+      - arn:aws:events:eu-west-1:520566123962:rule/CHECK_STOKC
+      Sid: ProtegoGenerateda6e8c740
+    - Action:
+      - iam:GetRole
+      Effect: Allow
+      Resource:
+      - arn:aws:iam::520566123962:role/DVSACartTotalRole
+      Sid: ProtegoGeneratedaf86786e
+    - Action:
+      - logs:CreateLogGroup
+      Effect: Allow
+      Resource:
+      - arn:aws:logs:eu-west-1:520566123962:log-group:/aws/lambda/*:*:*
+      Sid: ProtegoGeneratedbc4f6688
+    - Action:
+      - logs:CreateLogStream
+      - logs:PutLogEvents
+      Effect: Allow
+      Resource:
+      - arn:aws:logs:eu-west-1:520566123962:log-group:/aws/lambda/DVSA-GET-CART-TOTAL:*:*
+      Sid: ProtegoGeneratedf8fc8019
+RuleViolation:
+  Reason: Disabled
+  Result: Skipped
+VulnerableDependency:
+  Result: Succeeded

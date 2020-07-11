@@ -1,0 +1,308 @@
+Failed:
+  Functions:
+    AdminGetOrders:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Failed
+        Severity: Critical
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Skipped
+        ShortReason: User Configuration
+      VulnerableDependency:
+        Result: Succeeded
+    AdminGetReceipt:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Failed
+        Severity: Critical
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Skipped
+        ShortReason: User Configuration
+      VulnerableDependency:
+        Result: Succeeded
+    AdminTweet:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Failed
+        Severity: Critical
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Skipped
+        ShortReason: User Configuration
+      VulnerableDependency:
+        Result: Succeeded
+    AdminUpdateInventory:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Failed
+        Severity: Critical
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Skipped
+        ShortReason: User Configuration
+      VulnerableDependency:
+        Result: Succeeded
+    AdminUpdateOrders:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Failed
+        Severity: Critical
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Skipped
+        ShortReason: User Configuration
+      VulnerableDependency:
+        Result: Succeeded
+    CancelOrder:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Failed
+        Severity: High
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Skipped
+        ShortReason: User Configuration
+      VulnerableDependency:
+        Result: Succeeded
+    CreateReceipt:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Failed
+        Severity: Critical
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Skipped
+        ShortReason: User Configuration
+      VulnerableDependency:
+        Result: Succeeded
+    CronJobUpdate:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Failed
+        Severity: High
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Skipped
+        ShortReason: User Configuration
+      VulnerableDependency:
+        Result: Succeeded
+    CronOrderCleaner:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Failed
+        Severity: High
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Skipped
+        ShortReason: User Configuration
+      VulnerableDependency:
+        Result: Succeeded
+    CronProcessor:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Failed
+        Severity: High
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Skipped
+        ShortReason: User Configuration
+      VulnerableDependency:
+        Result: Succeeded
+    FeedbackUploads:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Failed
+        Severity: Critical
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Skipped
+        ShortReason: User Configuration
+      VulnerableDependency:
+        Result: Succeeded
+    GetOrder:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Failed
+        Severity: High
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Skipped
+        ShortReason: User Configuration
+      VulnerableDependency:
+        Result: Succeeded
+    GetOrders:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Failed
+        Severity: High
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Skipped
+        ShortReason: User Configuration
+      VulnerableDependency:
+        Result: Succeeded
+    GetTotal:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Failed
+        Severity: Critical
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Skipped
+        ShortReason: User Configuration
+      VulnerableDependency:
+        Result: Succeeded
+    OrderBilling:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Failed
+        Severity: High
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Skipped
+        ShortReason: User Configuration
+      VulnerableDependency:
+        Result: Succeeded
+    OrderManager:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Failed
+        Severity: Critical
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Skipped
+        ShortReason: User Configuration
+      VulnerableDependency:
+        Result: Failed
+        Severity: Medium
+        ShortReason: Found Vulnerable Dependencies
+    OrderNew:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Failed
+        Severity: High
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Skipped
+        ShortReason: User Configuration
+      VulnerableDependency:
+        Result: Succeeded
+    OrderShipping:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Failed
+        Severity: High
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Skipped
+        ShortReason: User Configuration
+      VulnerableDependency:
+        Result: Succeeded
+    OrderUpdate:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Failed
+        Severity: High
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Skipped
+        ShortReason: User Configuration
+      VulnerableDependency:
+        Result: Succeeded
+    PaymentProcessor:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Failed
+        Severity: High
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Skipped
+        ShortReason: User Configuration
+      VulnerableDependency:
+        Result: Succeeded
+    SendReceipt:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Failed
+        Severity: Critical
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Skipped
+        ShortReason: User Configuration
+      VulnerableDependency:
+        Result: Succeeded
+    UserAccount:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Failed
+        Severity: High
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Skipped
+        ShortReason: User Configuration
+      VulnerableDependency:
+        Result: Succeeded
+    UserCreate:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Failed
+        Severity: High
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Skipped
+        ShortReason: User Configuration
+      VulnerableDependency:
+        Result: Succeeded
+    UserInbox:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Failed
+        Severity: Critical
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Skipped
+        ShortReason: User Configuration
+      VulnerableDependency:
+        Result: Succeeded
+    UserProfile:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Failed
+        Severity: High
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Skipped
+        ShortReason: User Configuration
+      VulnerableDependency:
+        Result: Succeeded
+Skipped:
+  Functions: {}
+Successful:
+  Functions: {}

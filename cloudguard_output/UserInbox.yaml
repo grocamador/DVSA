@@ -1,0 +1,43 @@
+CredentialsUsage:
+  Result: Succeeded
+PermissiveRole:
+  RedundantPermissions:
+    logs:
+      logs:CreateLogStream:
+      - arn:aws:logs:eu-west-1:520566123962:log-group:/aws/lambda/*:*:*
+      logs:PutLogEvents:
+      - arn:aws:logs:eu-west-1:520566123962:log-group:/aws/lambda/*:*:*
+    ses:
+      ses:*:
+      - '*'
+    sts:
+      sts:*:
+      - '*'
+  Result: Failed
+  SuggestedRole:
+    Statement:
+    - Action:
+      - ses:VerifyEmailIdentity
+      - sts:GetCallerIdentity
+      Effect: Allow
+      Resource:
+      - '*'
+      Sid: ProtegoGenerated239cf869
+    - Action:
+      - logs:CreateLogGroup
+      Effect: Allow
+      Resource:
+      - arn:aws:logs:eu-west-1:520566123962:log-group:/aws/lambda/*:*:*
+      Sid: ProtegoGenerated3037c0ec
+    - Action:
+      - logs:CreateLogStream
+      - logs:PutLogEvents
+      Effect: Allow
+      Resource:
+      - arn:aws:logs:eu-west-1:520566123962:log-group:/aws/lambda/DVSA-USER-INBOX:*:*
+      Sid: ProtegoGenerated28378294
+RuleViolation:
+  Reason: Disabled
+  Result: Skipped
+VulnerableDependency:
+  Result: Succeeded

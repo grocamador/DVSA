@@ -1,0 +1,80 @@
+CredentialsUsage:
+  Result: Succeeded
+PermissiveRole:
+  RedundantPermissions:
+    dynamodb:
+      dynamodb:*:
+      - '*'
+    logs:
+      logs:CreateLogStream:
+      - arn:aws:logs:eu-west-1:520566123962:log-group:/aws/lambda/*:*:*
+      logs:PutLogEvents:
+      - arn:aws:logs:eu-west-1:520566123962:log-group:/aws/lambda/*:*:*
+    s3:
+      s3:*:
+      - '*'
+    ses:
+      ses:*:
+      - '*'
+    sqs:
+      sqs:*:
+      - '*'
+    sts:
+      sts:*:
+      - '*'
+  Result: Failed
+  SuggestedRole:
+    Statement:
+    - Action:
+      - s3:ListAllMyBuckets
+      Effect: Allow
+      Resource:
+      - '*'
+      Sid: ProtegoGenerated9e0457db
+    - Action:
+      - dynamodb:BatchGetItem
+      Effect: Allow
+      Resource:
+      - arn:aws:dynamodb:*:520566123962:table/*
+      Sid: ProtegoGenerated6d8a366c
+    - Action:
+      - dynamodb:DescribeTable
+      - dynamodb:GetItem
+      - dynamodb:UpdateItem
+      Effect: Allow
+      Resource:
+      - arn:aws:dynamodb:*:520566123962:table/DVSA-ORDERS-DB
+      Sid: ProtegoGenerated04f8a7e8
+    - Action:
+      - logs:CreateLogGroup
+      Effect: Allow
+      Resource:
+      - arn:aws:logs:eu-west-1:520566123962:log-group:/aws/lambda/*:*:*
+      Sid: ProtegoGenerated49d6be17
+    - Action:
+      - logs:CreateLogStream
+      - logs:PutLogEvents
+      Effect: Allow
+      Resource:
+      - arn:aws:logs:eu-west-1:520566123962:log-group:/aws/lambda/DVSA-CREATE-RECEIPT:*:*
+      Sid: ProtegoGenerateddab41bd5
+    - Action:
+      - s3:PutObject
+      Effect: Allow
+      Resource:
+      - arn:aws:s3:::*
+      Sid: ProtegoGenerated26c86f02
+    - Action:
+      - sqs:ChangeMessageVisibility
+      - sqs:DeleteMessage
+      - sqs:GetQueueAttributes
+      - sqs:ReceiveMessage
+      Effect: Allow
+      Resource:
+      - arn:aws:sqs:eu-west-1:520566123962:dvsa-order-paid-sqs
+      Sid: ProtegoGenerated94c2f190
+RuleViolation:
+  Reason: Disabled
+  Result: Skipped
+VulnerableDependency:
+  Result: Succeeded

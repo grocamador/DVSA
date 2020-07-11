@@ -1,0 +1,42 @@
+CredentialsUsage:
+  Result: Succeeded
+PermissiveRole:
+  RedundantPermissions:
+    dynamodb:
+      dynamodb:*:
+      - arn:aws:dynamodb:eu-west-1:520566123962:table/*
+    logs:
+      logs:CreateLogStream:
+      - arn:aws:logs:eu-west-1:520566123962:log-group:/aws/lambda/*:*:*
+      logs:PutLogEvents:
+      - arn:aws:logs:eu-west-1:520566123962:log-group:/aws/lambda/*:*:*
+    s3:
+      s3:*:
+      - arn:aws:s3:::dvsa-receipts-bucket-520566123962/*
+  Result: Failed
+  SuggestedRole:
+    Statement:
+    - Action:
+      - dynamodb:DescribeTable
+      Effect: Allow
+      Resource:
+      - arn:aws:dynamodb:eu-west-1:520566123962:table/DVSA-ORDERS-DB
+      Sid: ProtegoGenerateddd0921bf
+    - Action:
+      - logs:CreateLogGroup
+      Effect: Allow
+      Resource:
+      - arn:aws:logs:eu-west-1:520566123962:log-group:/aws/lambda/*:*:*
+      Sid: ProtegoGeneratedff824505
+    - Action:
+      - logs:CreateLogStream
+      - logs:PutLogEvents
+      Effect: Allow
+      Resource:
+      - arn:aws:logs:eu-west-1:520566123962:log-group:/aws/lambda/DVSA-ADMIN-UPDATE-ORDERS:*:*
+      Sid: ProtegoGenerated317a96d3
+RuleViolation:
+  Reason: Disabled
+  Result: Skipped
+VulnerableDependency:
+  Result: Succeeded

@@ -1,0 +1,44 @@
+CredentialsUsage:
+  Result: Succeeded
+PermissiveRole:
+  RedundantPermissions:
+    dynamodb:
+      dynamodb:*:
+      - arn:aws:dynamodb:eu-west-1:520566123962:table/*
+    logs:
+      logs:CreateLogStream:
+      - arn:aws:logs:eu-west-1:520566123962:log-group:/aws/lambda/*:*:*
+      logs:PutLogEvents:
+      - arn:aws:logs:eu-west-1:520566123962:log-group:/aws/lambda/*:*:*
+    sqs:
+      sqs:*:
+      - arn:aws:sqs:eu-west-1:520566123962:dvsa-order-paid-sqs
+  Result: Failed
+  SuggestedRole:
+    Statement:
+    - Action:
+      - dynamodb:DeleteItem
+      - dynamodb:DescribeTable
+      - dynamodb:GetItem
+      Effect: Allow
+      Resource:
+      - arn:aws:dynamodb:eu-west-1:520566123962:table/DVSA-ORDERS-DB
+      Sid: ProtegoGenerated72fc3f68
+    - Action:
+      - logs:CreateLogGroup
+      Effect: Allow
+      Resource:
+      - arn:aws:logs:eu-west-1:520566123962:log-group:/aws/lambda/*:*:*
+      Sid: ProtegoGeneratedc01ff92e
+    - Action:
+      - logs:CreateLogStream
+      - logs:PutLogEvents
+      Effect: Allow
+      Resource:
+      - arn:aws:logs:eu-west-1:520566123962:log-group:/aws/lambda/DVSA-ORDER-CANCEL:*:*
+      Sid: ProtegoGeneratedc70926a8
+RuleViolation:
+  Reason: Disabled
+  Result: Skipped
+VulnerableDependency:
+  Result: Succeeded

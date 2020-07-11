@@ -1,0 +1,51 @@
+CredentialsUsage:
+  Result: Succeeded
+PermissiveRole:
+  RedundantPermissions:
+    dynamodb:
+      dynamodb:*:
+      - arn:aws:dynamodb:eu-west-1:520566123962:table/*
+    lambda:
+      lambda:InvokeAsync:
+      - arn:aws:lambda:eu-west-1:520566123962:function:*
+      lambda:InvokeFunction:
+      - arn:aws:lambda:eu-west-1:520566123962:function:*
+    logs:
+      logs:CreateLogStream:
+      - arn:aws:logs:eu-west-1:520566123962:log-group:/aws/lambda/*:*:*
+      logs:PutLogEvents:
+      - arn:aws:logs:eu-west-1:520566123962:log-group:/aws/lambda/*:*:*
+  Result: Failed
+  SuggestedRole:
+    Statement:
+    - Action:
+      - dynamodb:DescribeTable
+      - dynamodb:PutItem
+      Effect: Allow
+      Resource:
+      - arn:aws:dynamodb:eu-west-1:520566123962:table/DVSA-USERS-DB
+      Sid: ProtegoGeneratedbb03ef54
+    - Action:
+      - lambda:InvokeFunction
+      Effect: Allow
+      Resource:
+      - arn:aws:lambda:eu-west-1:520566123962:function:DVSA-USER-INBOX
+      Sid: ProtegoGenerated8c8f0157
+    - Action:
+      - logs:CreateLogGroup
+      Effect: Allow
+      Resource:
+      - arn:aws:logs:eu-west-1:520566123962:log-group:/aws/lambda/*:*:*
+      Sid: ProtegoGenerated83201911
+    - Action:
+      - logs:CreateLogStream
+      - logs:PutLogEvents
+      Effect: Allow
+      Resource:
+      - arn:aws:logs:eu-west-1:520566123962:log-group:/aws/lambda/DVSA-USER-CREATE:*:*
+      Sid: ProtegoGenerated4d9cdfa0
+RuleViolation:
+  Reason: Disabled
+  Result: Skipped
+VulnerableDependency:
+  Result: Succeeded

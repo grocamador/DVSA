@@ -10,7 +10,7 @@ import os
 access_key = os.environ["TWITTER_ACCESS_TOKEN"]
 access_secret = os.environ["TWITTER_TOKEN_SECRET"]
 twitter_api = os.environ["TWITTER_API"]
-
+AWS_SUPER_SECRET = "THISSHOULDNTBEHEREOOPS"
 
 # ToDo: Fix bugs
 def authenticate():
