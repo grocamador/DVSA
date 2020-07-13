@@ -2,7 +2,6 @@
 # DVSA: a Damn Vulnerable Serverless Application ##
 ##################################################
 
-# This is a test to trigger an action
 
 service: dvsa
 
