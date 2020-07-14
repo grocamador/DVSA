@@ -1,5 +1,6 @@
 .idea
 .serverless
+cloudguard-config.json
 backend/src/functions/order-api/.serverless
 client/node_modules
 node_modules

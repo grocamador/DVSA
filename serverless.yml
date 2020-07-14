@@ -26,7 +26,7 @@ package:
 
 plugins:
   - serverless-finch
-  #- serverless-offline
+  - serverless-offline
   - serverless-stack-output
   - serverless-scriptable-plugin
   - serverless-cloudguard-plugin
@@ -43,22 +43,22 @@ custom:
     errorDocument: index.html
   cloudguard:
     fsp:
-      Enabled: false
+      Enabled: true
     proact:
       Enabled: true
       Features:
         PermissiveRole:
           Enabled: true
-          FailThreshold: Medium
+          FailThreshold: None
         VulnerableDependency:
           Enabled: true
-          FailThreshold: Medium
+          FailThreshold: None
         RuleViolation:
           Enabled: false
           FailThreshold: None
         CredentialsUsage:
           Enabled: true
-          FailThreshold: Medium
+          FailThreshold: None
 
 
   output:
