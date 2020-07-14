@@ -48,5 +48,12 @@ jobs:
       - name: Running sls package / CloudGuard Proact Scan
         run: |
           ~/.npm-global/bin/serverless package
+      - name: Upload reports if failed
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: CloudGuard report
+          path: cloudguard_output/
+        
       
         
