@@ -50,10 +50,10 @@ jobs:
           ~/.npm-global/bin/serverless package
       - name: Upload reports if failed
         uses: actions/upload-artifact@v2
-        if: failure()
+        # if: failure() # Upload report regardless of failure
         with:
           name: CloudGuard report
-          path: cloudguard_output/
+          path: cloudguard_output/CloudGuardScanReport.html
         
       
         
