@@ -16,4 +16,4 @@ Functions:
     # (String) the relative path to the functions code.
     # Can be a directory or a zip file
     # Must be located in the file system tree that is below the current working directory
-    CodeLocation: DVSA/backeng/src/functions/
+    CodeLocation: DVSA/backend/src/functions/
