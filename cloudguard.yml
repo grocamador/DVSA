@@ -10,7 +10,7 @@ Functions:
     #FriendlyName: myFunctionFriendlyName
 
     # (String) The runtime environment for the Lambda function. (python2.7, nodejs8.10, java8 ...)
-    Runtime : python2.7
+    Runtime : python3.6
     # (String) The handler file.function that is called to begin executing your function.
     Handler: handler.lambda_handler
     # (String) the relative path to the functions code.
