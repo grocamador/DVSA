@@ -5,9 +5,10 @@ name: CloudGuard Workload - Serverless CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, add-vulnerables-deps ]
   pull_request:
     branches: [ master ]
+  
 
 jobs:
   build:
