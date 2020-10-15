@@ -5,10 +5,7 @@ name: CloudGuard Workload - Serverless CI
 
 on:
   push:
-    branches: [ master, add-vulnerables-deps ]
   pull_request:
-    branches: [ master ]
-  
 
 jobs:
   build:
@@ -24,9 +21,9 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_ACCESS_SECRET_KEY }}
           aws-region: eu-west-1
       - name: Checkout repo
-        uses: actions/checkout@master
+        uses: actions/checkout
       - name: Setup node
-        uses: actions/setup-node@master
+        uses: actions/setup-node
         with:
           node-version: 12.18.1   
       - name: Decrypting CloudGuard access config 
