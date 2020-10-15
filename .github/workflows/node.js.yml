@@ -23,7 +23,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@ref
       - name: Setup node
-        uses: actions/setup-node@ref
+        uses: actions/setup-node@master
         with:
           node-version: 12.18.1   
       - name: Decrypting CloudGuard access config 
